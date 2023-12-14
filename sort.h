@@ -23,23 +23,23 @@ typedef enum bool
  * @prev: Pointer to the previous element of the list
  * @next: Pointer to the next element of the list
  */
-typedef struct double_list_int_s
+typedef struct listint_s
 {
     const int n;
-    struct double_list_int_s *prev;
-    struct double_list_int_si *next;
-} double_list_int_t;
+    struct listint_s *prev;
+    struct listint_s *next;
+} listint_t;
 
 /*Helper for swapping*/
 void swap_ints(int *a, int *b);
 
 /*Printing helper functions */
 void print_array(const int *array, size_t size);
-void print_list(const double_list_int_t *list);
+void print_list(const listint_t *list);
 
 /*Regular functions prototypes*/
 void bubble_sort(int *array, size_t size);
-void insertion_sort_list(double_list_int_t **list);
+void insertion_sort_list(listint_t **list);
 void selection_sort(int *array, size_t size);
 void quick_sort(int *array, size_t size);
 
